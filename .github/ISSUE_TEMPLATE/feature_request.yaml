@@ -1,0 +1,58 @@
+name: Feature Request
+description: Propose an API specification change or repository improvement for Anthale OpenAPI.
+labels: [enhancement, triage]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion.
+
+        The most useful requests explain the API use case, the proposed schema or endpoint change, and any compatibility or client impact.
+
+  - type: dropdown
+    id: request_type
+    validations:
+      required: true
+    attributes:
+      label: Request type
+      options:
+        - New endpoint
+        - Existing endpoint or schema change
+        - Documentation improvement
+        - Repository tooling or validation improvement
+
+  - type: input
+    id: api_area
+    attributes:
+      label: API area
+      description: Which endpoint, schema, or component is affected?
+      placeholder: ScanResult schema
+
+  - type: textarea
+    id: use_case
+    validations:
+      required: true
+    attributes:
+      label: Use case
+      description: Describe the user or integration need this change should support.
+
+  - type: textarea
+    id: proposal
+    validations:
+      required: true
+    attributes:
+      label: Proposed solution
+      description: Describe the endpoint, schema, or repository change you want to see.
+
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility considerations
+      description: Note any backward-compatibility or client-generation concerns.
+
+  - type: textarea
+    id: success_criteria
+    attributes:
+      label: Success criteria
+      description: How should we know this request is complete and useful?

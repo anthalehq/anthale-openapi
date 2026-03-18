@@ -1,0 +1,52 @@
+name: Bug Report
+description: Report a bug or unexpected behavior in Anthale OpenAPI.
+labels: [bug, triage]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug.
+
+        Please include enough detail for us to reproduce the issue in the specification.
+
+  - type: input
+    id: api_area
+    attributes:
+      label: Affected endpoint or component
+      description: Which endpoint, schema, or API area is affected?
+      placeholder: POST /v1/scans or ScanResult schema
+
+  - type: textarea
+    id: description
+    validations:
+      required: true
+    attributes:
+      label: Description
+      description: Describe the current behavior and why it is incorrect.
+
+  - type: textarea
+    id: reproduce
+    validations:
+      required: true
+    attributes:
+      label: Steps to reproduce
+      description: Provide a minimal, reproducible set of steps, payloads, or generation context.
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Describe the behavior or schema shape you expected to see.
+
+  - type: textarea
+    id: files
+    attributes:
+      label: Affected files
+      description: List any relevant paths such as `anthale.yaml` or `anthale.json`.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Tooling or client context
+      description: Include any generators, clients, validators, or versions that matter.
